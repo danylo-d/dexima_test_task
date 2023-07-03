@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div class="card col-md-6 mx-auto">
+    <div class="card-body text-center">
+      <h2 class="card-title">Lead Generator</h2>
+      <form method="post">
+        {% csrf_token %}
+        {% crispy form %}
+        <button type="submit" class="btn btn-primary">Generate Leads</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}
